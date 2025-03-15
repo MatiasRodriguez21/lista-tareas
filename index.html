@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tareas</h1>
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="Agregar nueva tarea">
+            <input type="date" id="task-date" placeholder="Fecha de vencimiento">
+            <button id="add-task">Agregar</button>
+        </div>
+        <ul id="task-list"></ul>
+        <div class="task-controls">
+            <button id="clear-completed">Limpiar completadas</button>
+            <button id="clear-all">Limpiar todas</button>
+        </div>
+    </div>
+    <button id="toggle-mode" class="modern-toggle">
+        <span id="mode-icon">🌙</span> <!-- Ícono de luna por defecto -->
+    </button> <!-- Botón para alternar modo en la esquina -->
+    <script src="js/script.js"></script>
+</body>
+</html>

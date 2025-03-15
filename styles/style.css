@@ -1,0 +1,172 @@
+/* Variables de color */
+:root {
+    --royal-blue-traditional: #03256cff;
+    --persian-blue: #2541b2ff;
+    --green-blue: #1768acff;
+    --periwinkle: #d8dcffff;
+    --white: #ffffffff;
+    --dark-background: #343a40; /* Fondo oscuro */
+    --dark-text: #ffffff; /* Texto claro */
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--periwinkle); /* Usar variable de color */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--white); /* Usar variable de color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--royal-blue-traditional); /* Usar variable de color */
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input, #task-date {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#add-task {
+    padding: 10px 20px;
+    background-color: var(--green-blue); /* Usar variable de color */
+    color: var(--white); /* Usar variable de color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#add-task:hover {
+    background-color: #218838; /* Color de hover */
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    padding: 10px;
+    background: #f8f9fa;
+    margin: 5px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-list li.completed {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-date {
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+
+.task-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.task-controls button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#clear-completed {
+    background-color: #ffc107;
+}
+
+#clear-completed:hover {
+    background-color: #e0a800;
+}
+
+#clear-all {
+    background-color: #dc3545;
+    color: var(--white); /* Usar variable de color */
+}
+
+#clear-all:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text);
+}
+
+body.dark-mode .container {
+    background: #495057; /* Fondo oscuro para el contenedor */
+}
+
+body.dark-mode h1 {
+    color: var(--white);
+}
+
+body.dark-mode #task-list li {
+    background: #6c757d; /* Fondo oscuro para las tareas */
+    color: var(--white);
+}
+
+body.dark-mode #add-task {
+    background-color: var(--green-blue);
+    color: var(--white);
+}
+
+body.dark-mode #clear-completed {
+    background-color: #ffc107;
+}
+
+body.dark-mode #clear-all {
+    background-color: #dc3545;
+    color: var(--white);
+}
+
+/* Estilos para el botón de modo oscuro */
+#toggle-mode {
+    position: fixed; /* Fijar en la esquina */
+    top: 20px; /* Espaciado desde la parte superior */
+    right: 20px; /* Espaciado desde la derecha */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    background-color: #555; /* Color más oscuro para el modo oscuro */
+    color: var(--white);
+    border: none;
+    border-radius: 50%; /* Botón redondo */
+    cursor: pointer;
+    font-size: 20px; /* Tamaño de fuente más grande */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#toggle-mode:hover {
+    background-color: var(--persian-blue); /* Color de hover */
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
